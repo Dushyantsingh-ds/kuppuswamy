@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:2908/Default.aspx -->
+<html lang="en" style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>
+    Register - My ASP.NET Application
+    
+
+    
+</title><script src="./Register - My ASP.NET Application_files/modernizr-2.8.3.js.download"></script>
+<link href="./Register - My ASP.NET Application_files/bootstrap.css" rel="stylesheet">
+<link href="./Register - My ASP.NET Application_files/Site.css" rel="stylesheet">
+<link href="http://localhost:1852/favicon.ico" rel="shortcut icon" type="image/x-icon"><style></style><style></style></head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  <script type="text/javascript" language="JavaScript"> 
+
+ var score=null,combosum=null,avrageincome=null,clss_str=null;
+ var combo1=null,combo2=null,valtxtbox1=null,valtxtbox2=null,result=null;
+
+
+
+ 
+document.getElementById('txtbox2').value =null;
+document.getElementById('txtbox1').value =null; 
+score=null;combosum=null;avrageincome=null;clss_str=null
+combo1=null;combo2=null;valtxtbox1=null;valtxtbox2=null;result=null;
+document.getElementById("Education_Score").innerHTML = null;
+ document.getElementById("Occupation_Score").innerHTML = null;
+ document.getElementById("Per_Capita_Family_Income").innerHTML = null;
+  document.getElementById("Socioeconomic_Class").innerHTML = null;
+  document.getElementById("Per_capita_score").innerHTML = null;
+  
+	
+function reset()
+{
+document.getElementById('txtbox2').value =null;
+document.getElementById('txtbox1').value =null; 
+score=null;combosum=null;avrageincome=null;clss_str=null
+combo1=null;combo2=null;valtxtbox1=null;valtxtbox2=null;result=null;
+document.getElementById("Education_Score").innerHTML = null;
+ document.getElementById("Occupation_Score").innerHTML = null;
+ document.getElementById("Per_Capita_Family_Income").innerHTML = null;
+  document.getElementById("Socioeconomic_Class").innerHTML = null;
+
+  document.getElementById("Per_capita_score").innerHTML = null;
+}
+		
+function cal() 
+{
+	if(txtbox1.value !=null &&  txtbox2.value !=null && txtbox1.value !=0 &&  txtbox2.value !=0 )
+	{
+	
+  combo1 = parseInt(document.getElementById("DropDownList1").value);
+  combo2 = parseInt(document.getElementById("DropDownList2").value);
+  combosum = combo1 + combo2 // sum of combobox 
+  score = score + combosum;
+  document.getElementById("Education_Score").innerHTML = combo1 ;
+  document.getElementById("Occupation_Score").innerHTML = combo2 ;
+  
+ 
+  valtxtbox1 = parseInt (document.getElementById("txtbox1").value);
+  valtxtbox2 = parseInt(document.getElementById("txtbox2").value);
+  avrageincome = (valtxtbox2 / valtxtbox1); // avrage salary person
+  
+  
+  
+  if(avrageincome >=47348 ){score=score+12;  document.getElementById("Per_capita_score").innerHTML = 12;}
+    else { if(avrageincome>=23674 && avrageincome<=47347){score=score+10;  document.getElementById("Per_capita_score").innerHTML = 10;} 
+	     else { if(avrageincome>=17756 && avrageincome<=23673){score=score+6;  document.getElementById("Per_capita_score").innerHTML = 6;} 
+		       else { if(avrageincome>=11837 && avrageincome<=17755){ score=score+4; document.getElementById("Per_capita_score").innerHTML = 4;} 
+			        else { if(avrageincome>=7102 && avrageincome<=11836){ score=score+3; document.getElementById("Per_capita_score").innerHTML = 3; } 
+			            else { if(avrageincome>=2391 && avrageincome<=7101){ score=score+2;  document.getElementById("Per_capita_score").innerHTML = 2;} 
+			                  else { if(avrageincome<=2390){ score=score+1;  document.getElementById("Per_capita_score").innerHTML = 1;} 
+   }}}}}}
+   
+
+
+    document.getElementById("Per_Capita_Family_Income").innerHTML = score;
+  if(score>=26 && score<=29){clss_str="Upper Class (26-29)"}
+  else { if(score>=16 && score<=25){clss_str="Upper Middle (16-25)"}
+    else { if(score>=11 && score<=15){clss_str="Lower Middle (11-15)"}
+	 else { if(score>=5 && score<=10){clss_str="Upper Lower (5-10)"}
+	    else {if(score<5) clss_str="Lower (below 5)"}}
+  }}
+
+   document.getElementById("Socioeconomic_Class").innerHTML = clss_str;
+  
+  } else{
+   alert("Please Complete the Form");
+  }
+  }
+ 
+ </script> 
+ 
+<body>
+
+   
+    
+
+   
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM5NTYzMjUxM2RkzZx4ALQgcP7edQiOBwslAEfEZcFjhmGnMJmKVzO9AGA=">
+</div>
+
+     
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="1gvEk8a1dwY2e42NWVhxPW+D5O41vyW8bSwnmCZqW4S0T/ALvToKtg0baJuQRWXPABy1hiCkBk2GJusCFLt6Ce2k5O/dticIcF1v04vTPVPkz1PuWVfGq6BYrt4VS/YnMsXiGmrPgb95SSxDfijv/Y1+DZWFSZjtHCmiEYLfukEK1fbLDtY4ZO+2/q7VsVlhG9j4dWSwi9J4BkDHjP3ZIg==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+<script src="./Register - My ASP.NET Application_files/MsAjaxJs" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="./Register - My ASP.NET Application_files/jquery-3.3.1.js.download" type="text/javascript"></script>
+<script src="./Register - My ASP.NET Application_files/bootstrap.js.download" type="text/javascript"></script>
+<script src="./Register - My ASP.NET Application_files/WebFormsJs" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="87EDC3EC">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="V+/gOLK9F3Ch0S3oeq5Mni64L9/tvb0q7ODobDNM6qYZq/jQEKTE7GXORAns7xGgziurjqsU6YDNtFpW57On6/APMEMvR6yYuNVDIaJOufO4bsKnADWdUOl715RZn6DIEGfXZd2hdxTnc7L/0dFCSgm8zq5Qd7xQA7f0GzR51yx17h3iheM1N+hgvzVLfym4">
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl08', 'ctl01', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <div class="container body-content">
+            
+    <h2>Kuppuswamy </h2>
+    <p class="text-danger">
+        
+    </p>
+
+    <div class="form-horizontal">
+        <h4>Scale</h4>
+        <hr>
+        <div id="MainContent_ctl00" class="text-danger" data-valsummary="true" style="display:none;">
+
+</div>
+        <div class="form-group">
+            <label for="MainContent_UserName" class="col-md-2 control-label">Education</label>
+            <div class="col-md-10">
+
+   <select name="DropDownList1" id="DropDownList1" class="form-control">
+	<option value="7" >Profession Or Honours</option>
+	<option value="6"  >Graduate Or Postgraduate</option>
+	<option value="5"  >Intermediate/Diploma</option>
+	<option value="4"  >High School Certificate</option>
+	<option value="3"  >Middle School Certificate</option>
+	<option value="2"  >Primary School Certificate</option>
+	<option value="1"  >Illiterate</option>
+	
+</select>
+            
+                <span data-val-controltovalidate="MainContent_UserName" data-val-errormessage="The user name field is required." id="MainContent_ctl02" class="text-danger" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="visibility:hidden;">The user name field is required.</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="MainContent_Password" class="col-md-2 control-label">Occupation</label>
+            <div class="col-md-10">
+           
+    <select name="DropDownList2" id="DropDownList2" class="form-control">
+	<option value="10" title='Vic'>Profession</option>
+	<option value="6" title='Vic'>Semi Profession</option>
+	<option value="5" title='Vic'>Clerical, Shop-Owner Or Famer</option>
+	<option value="4" title='Vic'>Skilled Worker</option>
+	<option value="3" title='Vic'>Semiskilled Worker</option>
+	<option value="2" title='Vic'>Unskilled Worker</option>
+	<option value="1" title='Vic'>Unemployed</option>
+
+</select>
+
+
+                <span data-val-controltovalidate="MainContent_Password" data-val-errormessage="The password field is required." id="MainContent_ctl04" class="text-danger" data-val="true" data-val-evaluationfunction="RequiredFieldValidatorEvaluateIsValid" data-val-initialvalue="" style="visibility:hidden;">The password field is required.</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label  class="col-md-2 control-label">Total Family Income Per Month</label>
+            <div class="col-md-10">
+                <input id="txtbox2" type="Text" id="MainContent_ConfirmPassword" class="form-control">
+              </div>
+        </div>
+         <div class="form-group">
+            <label class="col-md-2 control-label">Total Family Members</label>
+            <div class="col-md-10">
+                <input id="txtbox1" type="Text" id="MainContent_ConfirmPasswdford" class="form-control">
+              </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+             <input type="submit" class="btn btn-default"  value="Calculate" onclick="cal()" >
+			 				<input type="submit" value="Reset" class="btn btn-default"  onclick="reset();document.getElementById('txtbox2').value = '';document.getElementById('txtbox1').value = '';" >
+
+				
+				<br />  <hr />
+ <span >Education Score =</span> <span id = "Education_Score"></span> <br /> 
+ <span>Occupation Score =</span> <span id = "Occupation_Score"></span><br /> 
+ <span>Per Capita Income Score =</span> <span id = "Per_capita_score"></span><br />
+ <span >Total Score =</span> <span id = "Per_Capita_Family_Income"></span><br /> 
+ <span >Socioeconomic Class =</span> <span id = "Socioeconomic_Class"></span><br /> 
+<br /> <hr />
+
+
+
+    <h2>Normal Parameters</h2>
+    <hr />
+    <p>Education</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Education of the Head</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Profession or Honours </td>
+          <td>7</td>
+        </tr>      
+        <tr class="success">
+          <td>Graduate </td>
+          <td>6</td>
+        </tr>
+        <tr class="danger">
+          <td>Intermediate or diploma </td>
+          <td>5</t>
+        
+        </tr>
+        <tr class="info">
+          <td>High school certificate </td>
+          <td>4</td>
+          
+        </tr>
+        <tr class="warning">
+          <td>Middle school certificate </td>
+          <td>3</td>
+        
+        </tr>
+        <tr class="active">
+          <td>Primary school certificate </td>
+          <td>2</td>
+         
+        </tr>
+        <tr class="active">
+            <td>Illiterate  </td>
+            <td>1</td>
+           
+          </tr>
+      </tbody>
+    </table>
+
+    <hr >
+
+ <hr />
+    <p>Occupation</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Occupation of the Head</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Professional  </td>
+          <td>10</td>
+        </tr>      
+        <tr class="success">
+          <td>Semi Professional</td>
+          <td>6</td>
+        </tr>
+        <tr class="danger">
+          <td>Clerical, Shop-Owner Or Famer</td>
+          <td>5</t>
+        
+        </tr>
+        <tr class="info">
+          <td>Skilled Worker</td>
+          <td>4</td>
+          
+        </tr>
+        <tr class="warning">
+          <td>Semiskilled Worker</td>
+          <td>3</td>
+        
+        </tr>
+        <tr class="active">
+          <td>Unskilled Worker</td>
+          <td>2</td>
+         
+        </tr>
+        <tr class="active">
+            <td>Unemployed</td>
+            <td>1</td>
+           
+          </tr>
+      </tbody>
+    </table>
+
+    <hr >
+
+    <hr />
+    <p>Per Capita Income</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Range</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> 47348 and above</td>
+          <td>12</td>
+        </tr>      
+        <tr class="success">
+          <td>23674-47347 </td>
+          <td>10</td>
+        </tr>
+        <tr class="danger">
+          <td>17756-23673</td>
+          <td>6</t>
+        
+        </tr>
+        <tr class="info">
+          <td>11837-17755 </td>
+          <td>4</td>
+          
+        </tr>
+        <tr class="warning">
+          <td>7102-11836</td>
+          <td>3</td>
+        
+        </tr>
+        <tr class="active">
+          <td>2391-7101</td>
+          <td>2</td>
+         
+        </tr>
+        <tr class="active">
+            <td>Less than 2390  </td>
+            <td>1</td>
+           
+          </tr>
+      </tbody>
+    </table>
+    <hr>
+    <hr />
+    <p>Class</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Total Score</th>
+          <th>Socioeconomic Class</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>26-29</td>
+          <td>Upper Class</td>
+        </tr>      
+        <tr class="success">
+          <td>16-25 </td>
+          <td>Upper Middle</td>
+        </tr>
+        <tr class="danger">
+          <td>11-15</td>
+          <td>Lower Middle</t>
+        
+        </tr>
+        <tr class="info">
+          <td>5-10</td>
+          <td>Upper Lower</td>
+          
+        </tr>
+        <tr class="warning">
+          <td>Below 5</td>
+          <td>Lower</td>
+        
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+                
+            </div>
+        </div>
+    </div>
+
+            <hr>
+            <footer>
+                <p>Developed by <a >Truth Power Info.</a></p>
+            </footer>
+        </div>
+
+
+
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAA9TJD/1kRxBr3SygLoTZtC8TGPWD9l8zxY631Hlbdm5472SMu6XFlFbwFabiZheQ3LUsf5J/OG5a7DdNFxgW9vdnq4CVjmSfSwoZaTlzZiMqCnhfI6bwg26J7qTDFOrG1A+EMWM9yb7oEdSfoegAJOdGJFKGrixhNRIBkKHiTebmIxDqQDFyUS6vj2Kn/1r78dFDSCLQhL8Q9RiEbuT9biM1p2j47H5r28zETPfAehi+eAOMzuowQfbzgOM/A/Ei4kMBCAaQ8GW4OmeFx7T3hJZWwF4AOpTtdFyOBbUq0/ies34O/GfAV4V4n0wgFZHr3d/p5nifD2dXh/98gCgDcrozTJsboBZF1lWf8u7NIZF0g==">
+</div>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Safari (IPhone)","requestId":"b253f5c57483480c9790f594671dec4b"}
+</script>
+<script type="text/javascript" src="./Register - My ASP.NET Application_files/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+
+
+</body></html>

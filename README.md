@@ -1,0 +1,7 @@
+# kuppuswamyscale
+ Kuppuswamy scale is a composite score of education and occupation of the head of the family along with monthly income of the family, which yields a score of 3-29. This scale classifies the study populations into high, middle, and low . This web app developed by Dushyant Singh
+The socioeconomic status (SES) is one of the important factors affecting the health condition of an individual or a family. The economic and social position relatively is being determined by various variables that are responsible for income, education, occupation, family effluence, physical assets, social position, social participation, caste, political influence, and muscle power and can be measured by SES. Several scales have been proposed and reported to evaluate the socioeconomic classes of families in specific circumstances, such as in urban or rural setting: Rahudkar scale 1960, Jalota scale 1970, Udai Pareekh scale 1964, Kuppuswamy scale 1976, Shrivastava scale 1978, Kulshrestha scale 1972, and Bharadwaj scale 2001. Economic status is also considered a determinant of SES and presents a source of security providing a measure of a household's capability to fight emergencies, absorb economic shocks, or provide the means to live comfortably. Wealth can be influenced by intergenerational transitions as well as accumulation of income, savings, and immovable property.
+
+This website app is designe and developed by Dushyant Singh
+this is also aviable on playstore 
+https://play.google.com/store/apps/details?id=com.truthpower.kuppuswamiy_scale&hl=en_GB
